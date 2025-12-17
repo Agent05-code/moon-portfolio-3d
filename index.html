@@ -3,11 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon Portfolio 3D</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <title>Moon Portfolio - 3D Experience</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    <script type="module" src="src/js/main.js"></script>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1 class="loading-title">Moon Portfolio</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Preparing lunar experience...</p>
+        </div>
+    </div>
+
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container">
+        <canvas id="moon-canvas"></canvas>
+    </div>
+
+    <!-- UI Overlay -->
+    <div id="ui-overlay" class="hidden">
+        <!-- Navigation -->
+        <nav id="main-nav" class="nav-container">
+            <button class="nav-button" data-section="about">About</button>
+            <button class="nav-button" data-section="projects">Projects</button>
+            <button class="nav-button" data-section="contact">Contact</button>
+        </nav>
+
+        <!-- Instructions -->
+        <div id="instructions" class="instructions-panel">
+            <p>Use WASD or Arrow keys to walk</p>
+            <p>Mouse to look around</p>
+            <p>Space to jump</p>
+        </div>
+
+        <!-- Portfolio Sections -->
+        <div id="portfolio-sections">
+            <div class="section hidden" id="about-section">
+                <h2>About Me</h2>
+                <div class="section-content">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+            <div class="section hidden" id="projects-section">
+                <h2>Projects</h2>
+                <div class="section-content">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+            <div class="section hidden" id="contact-section">
+                <h2>Contact</h2>
+                <div class="section-content">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./src/js/main.js"></script>
 </body>
 </html>
