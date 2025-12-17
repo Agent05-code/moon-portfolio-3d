@@ -1,0 +1,2 @@
+// Lighting setup and configuration
+
